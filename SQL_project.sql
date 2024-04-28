@@ -20,3 +20,23 @@ Where Genre="Science"Or Genre="Fiction";
 UPDATE BOOKS
 Set Name="Monkey man",Genre="Undecided"
 Where Book_id=1;
+-- more basic queries
+SELECT  Book_id ,Name From BOOKS;
+#3
+SELECT BOOKS.Name,BOOKS.Valuation
+FROM BOOKS
+ORDER BY Name; # column to start with
+SELECT * From BOOKS
+WHERE Genre= "Sci_fi" OR Genre="Romance";
+-- Some other basic queries 
+SELECT Name, Genre From BOOKS
+WHERE Genre<>"Romance";-- <> this openration means not equal
+Select Name ,Genre From BOOKS
+WHERE Book_id <=4 AND Name<>"Selfish gene";
+-- Use of the IN Ipererator
+SELECT * from BOOKS
+WHERE Name IN ("Selfish gene","Beauty and BEast")
+SELECT * from BOOKS
+where Valuation <100000;
+SELECT * from BOOKS
+Where Genre IN ("sfi_ci","Romance")
