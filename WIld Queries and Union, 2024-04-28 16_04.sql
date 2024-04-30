@@ -55,4 +55,29 @@ from employee
 Union
 SELECT branch_name
 From branch ;
+- UNION   used to combine two different querries
+--create list of employee and branch they are working 
+--in both statements there should be the same  number of columns other wise union wont work for you.
+select first_name
+from employee
+Union
+SELECT branch_name
+From branch 
+UNION 
+Select client_name
+from CLIENT;
+-- find the list of all suppliers and branch and clinets
+SELECT client_name,branch_id from CLIENT
+UNION
+SELECT supplier_name,branch_id
+from branch_supplier;
+
+
+-- find the list of all the money earned or spent by the company
+Select salary 
+from employee
+UNION
+SELECT total_sales 
+from works_with;
+
 
